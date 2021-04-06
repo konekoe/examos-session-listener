@@ -1,0 +1,12 @@
+[Unit]
+Description=Acts as a userland slave to do miscellaneous stuff for Exam Service daemon
+PartOf=graphical.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/konekoe-session-listener
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
